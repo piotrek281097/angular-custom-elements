@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <x-contact-card name="bob" phone="123"></x-contact-card> -->
+    <y-contact-card name="bob" phone="123"></y-contact-card>
+    <!-- <script src='x-contact-card.js'></script> -->
+    <script src='y-contact-card.js'></script>
+
+    <custom-contact-card name="kris"></custom-contact-card>
+
+   
+    <script src='polyfills.js'></script>
+    <script src='runtime.js'></script>
+    <script src='scripts.js'></script>
+    <script src='main.js'></script>
+
+    <script>
+        document
+            .querySelectorAll('[name]')
+            .forEach((el) => el.addEventListener('more', ev => alert(JSON.stringify(ev.detail, null, 2))));
+    </script>
+</body>
+</html>
